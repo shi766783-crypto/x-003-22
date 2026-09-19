@@ -64,6 +64,8 @@ const actualReduction = computed(() => {
   const previous = totalMonthly.value * 1.08
   return Math.max(0, (previous - totalMonthly.value) / previous * 100)
 })
+// 本月相对上月基线实际节电量（kWh），与 actualReduction 使用同一条基线
+const actualSavedKwh = computed(() => Math.max(0, totalMonthly.value * 0.08))
 
 function addAppliance(appliance) {
   state.appliances.push({ ...appliance, id: crypto.randomUUID?.() || `appliance-${Date.now()}` })
@@ -126,6 +128,7 @@ export function useEnergyStore() {
     trendData,
     estimatedSaving,
     actualReduction,
+    actualSavedKwh,
     addAppliance,
     updateAppliance,
     removeAppliance,
