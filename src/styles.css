@@ -71,3 +71,21 @@ button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px s
 @media (max-width: 760px) {
   .app-shell { display: block; }.sidebar { position: sticky; z-index: 10; top: 0; width: 100%; min-height: 0; height: auto; padding: 12px 14px; border-right: 0; border-bottom: 1px solid var(--line); }.brand-lockup { padding: 0; }.sidebar-rule, .sidebar-bottom, .nav-label { display: none; }.nav-groups { display: flex; gap: 4px; margin-top: 12px; overflow-x: auto; }.nav-group { display: flex; gap: 3px; }.nav-group + .nav-group { margin-top: 0; }.nav-item { width: auto; min-width: max-content; padding: 8px 10px; gap: 6px; font-size: 11px; }.nav-icon { font-size: 15px; }.main-content { width: 100%; padding: 24px 14px 35px; }.topbar { margin-bottom: 24px; }.topbar-actions { gap: 8px; }.price-button { min-width: 0; width: 42px; height: 37px; justify-content: center; padding: 0; }.price-button > span:not(.icon-badge) { display: none; }.avatar { width: 34px; height: 34px; }.page-heading h1 { font-size: 25px; }.page-subtitle { font-size: 11px; }.summary-grid, .two-thirds, .equal-grid { grid-template-columns: 1fr; }.metric-card { min-height: 130px; }.metric-value { margin-top: 12px; }.donut-content { justify-content: space-around; }.recommendation-banner, .insight-hero, .challenge-banner, .profile-hero { align-items: flex-start; flex-wrap: wrap; padding: 18px; }.recommendation-banner .secondary-button { margin-left: 56px; }.page-toolbar { align-items: stretch; flex-direction: column; }.toolbar-filters { width: 100%; }.search-box { flex: 1; width: auto; }.appliance-stats, .profile-stats { grid-template-columns: repeat(2, 1fr); }.appliance-stats > div:nth-child(2), .profile-stats > div:nth-child(2) { border-right: 0; }.appliance-stats > div:nth-child(n + 3), .profile-stats > div:nth-child(n + 3) { border-top: 1px solid var(--line); }.insight-hero h2, .challenge-banner h2, .profile-copy h2 { font-size: 20px; }.goal-control { width: 100%; min-width: 0; padding: 15px 0 0; border-top: 1px solid #d2e2ac; border-left: 0; }.score-layout { grid-template-columns: 1fr; justify-items: center; }.score-layout > div:last-child { width: 100%; }.challenge-list { grid-template-columns: 1fr; }.mission-stat { padding: 0 0 0 15px; margin-left: auto; }.challenge-banner .mission-stat { border-left: 0; }.leaderboard-head, .leaderboard-row { grid-template-columns: 30px 1fr 70px 20px; padding-left: 4px; padding-right: 4px; }.leaderboard-head span:nth-child(1) { font-size: 0; }.leaderboard-head span:nth-child(1)::after { content: "#"; font-size: 9px; }.saving-tag { display: none; }.badge-grid { grid-template-columns: repeat(2, 1fr); padding: 15px; }.profile-total { width: 100%; padding: 14px 0 0; border-top: 1px solid #d9e5bd; border-left: 0; }.profile-footer-actions { align-items: flex-start; gap: 12px; flex-direction: column; }.form-grid { grid-template-columns: 1fr; }.field-span-2 { grid-column: auto; }.modal-panel { padding: 20px; }
 }
+
+/* 能耗侦探榜：排序切换、趋势色与我的排名提示条 */
+.detective-toolbar { display: flex; align-items: center; gap: 10px; margin-top: 15px; padding: 10px 16px; background: #f7f9f3; border: 1px solid #e6edd6; border-radius: 8px; }
+.detective-toolbar-label { color: #6b7a52; font-size: 10px; letter-spacing: .08em; }
+.detective-segmented { background: #eef1ea; }
+.detective-toolbar-hint { margin-left: auto; color: #a0a9a3; font-size: 9px; }
+.leader-trend.trend-up { color: #85a449; }
+.leader-trend.trend-flat { color: #b0b8ad; }
+.leader-trend.trend-down { color: #c77b5f; }
+.saving-percent i { font-style: normal; font-size: 9px; color: #9aa397; }
+.leaderboard-foot { display: flex; align-items: center; gap: 6px; margin: 10px 16px 2px; padding-top: 11px; border-top: 1px solid #edf0ed; color: #7c8775; font-size: 10px; }
+.leaderboard-foot b { color: #536b28; font-weight: 600; }
+.mine-pin { color: #85a449; font-size: 8px; }
+@media (max-width: 760px) {
+  .detective-toolbar { flex-wrap: wrap; padding: 9px 12px; }
+  .detective-toolbar-hint { width: 100%; margin-left: 0; }
+  .leaderboard-foot { margin: 10px 4px 2px; }
+}
